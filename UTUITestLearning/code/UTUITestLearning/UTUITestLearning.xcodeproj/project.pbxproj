@@ -24,6 +24,7 @@
 		04513C8524551EDA0018A867 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8424551EDA0018A867 /* LoginViewController.swift */; };
 		04513C8824551EF20018A867 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8724551EF20018A867 /* RegisterViewController.m */; };
 		04513C8B24551F150018A867 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8A24551F150018A867 /* RegisterModel.m */; };
+		6EDD6FD6A4EB78D4CAE50EC9 /* Pods_UTUITestLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A30E0AA9FDB5936CA3952C /* Pods_UTUITestLearning.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03A30E0AA9FDB5936CA3952C /* Pods_UTUITestLearning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UTUITestLearning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0401703024555F0B00CE6AFC /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		0401703224555F1F00CE6AFC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		0401703424555F3C00CE6AFC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,8 @@
 		04513C8924551F150018A867 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		04513C8A24551F150018A867 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		04513C90245524580018A867 /* UTUITestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UTUITestPlayground.playground; path = ../UTUITestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		4912FC011A888C3D8EACC25A /* Pods-UTUITestLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTUITestLearning.release.xcconfig"; path = "Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning.release.xcconfig"; sourceTree = "<group>"; };
+		5D49013E6836CBE0EC6A8152 /* Pods-UTUITestLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTUITestLearning.debug.xcconfig"; path = "Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EDD6FD6A4EB78D4CAE50EC9 /* Pods_UTUITestLearning.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +147,8 @@
 				04513C6024551D370018A867 /* UTUITestLearningTests */,
 				04513C6B24551D370018A867 /* UTUITestLearningUITests */,
 				04513C4824551D350018A867 /* Products */,
+				CAD5918F209F74E4063E35B9 /* Pods */,
+				A6A2136ED7892898DA438B87 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -237,6 +244,24 @@
 			name = Playground;
 			sourceTree = "<group>";
 		};
+		A6A2136ED7892898DA438B87 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03A30E0AA9FDB5936CA3952C /* Pods_UTUITestLearning.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAD5918F209F74E4063E35B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5D49013E6836CBE0EC6A8152 /* Pods-UTUITestLearning.debug.xcconfig */,
+				4912FC011A888C3D8EACC25A /* Pods-UTUITestLearning.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04513C7124551D370018A867 /* Build configuration list for PBXNativeTarget "UTUITestLearning" */;
 			buildPhases = (
+				AEF8244CA2BAB1D49E8F2658 /* [CP] Check Pods Manifest.lock */,
 				04513C4324551D350018A867 /* Sources */,
 				04513C4424551D350018A867 /* Frameworks */,
 				04513C4524551D350018A867 /* Resources */,
+				5C221DEA0F33A918EB7DF069 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,6 +390,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C221DEA0F33A918EB7DF069 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AEF8244CA2BAB1D49E8F2658 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UTUITestLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04513C4324551D350018A867 /* Sources */ = {
@@ -551,6 +620,7 @@
 		};
 		04513C7224551D370018A867 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D49013E6836CBE0EC6A8152 /* Pods-UTUITestLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -574,6 +644,7 @@
 		};
 		04513C7324551D370018A867 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4912FC011A888C3D8EACC25A /* Pods-UTUITestLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
