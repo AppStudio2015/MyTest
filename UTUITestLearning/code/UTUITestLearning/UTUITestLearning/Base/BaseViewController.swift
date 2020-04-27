@@ -1,17 +1,18 @@
 //
-//  HomeViewController.swift
+//  BaseViewController.swift
 //  UTUITestLearning
 //
-//  Created by qufei on 2020/4/26.
+//  Created by qufei on 2020/4/27.
 //  Copyright © 2020 qufei. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view.
     }

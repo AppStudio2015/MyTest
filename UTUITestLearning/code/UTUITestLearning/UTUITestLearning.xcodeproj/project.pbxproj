@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,6 +24,17 @@
 		04513C8524551EDA0018A867 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8424551EDA0018A867 /* LoginViewController.swift */; };
 		04513C8824551EF20018A867 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8724551EF20018A867 /* RegisterViewController.m */; };
 		04513C8B24551F150018A867 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8A24551F150018A867 /* RegisterModel.m */; };
+		047D91B02456B40B00A6EA98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91AF2456B40B00A6EA98 /* BaseViewController.swift */; };
+		047D91B22456B42000A6EA98 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B12456B42000A6EA98 /* BaseView.swift */; };
+		047D91B42456B43700A6EA98 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B32456B43700A6EA98 /* BaseModel.swift */; };
+		047D91B72456B59600A6EA98 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B62456B59600A6EA98 /* UserModel.swift */; };
+		047D91B92456B5BF00A6EA98 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B82456B5BF00A6EA98 /* UserView.swift */; };
+		047D91BB2456B5D000A6EA98 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91BA2456B5D000A6EA98 /* UserViewController.swift */; };
+		047D91BF2456B77900A6EA98 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91BE2456B77900A6EA98 /* UIColorExtensions.swift */; };
+		047D91C12456B7CE00A6EA98 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91C02456B7CE00A6EA98 /* UIFontExtensions.swift */; };
+		047D91C32456B9E700A6EA98 /* UserView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D91C22456B9E700A6EA98 /* UserView.xib */; };
+		047D91C52456BCE200A6EA98 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D91C42456BCE200A6EA98 /* LoginView.xib */; };
+		047D91C72456DC3F00A6EA98 /* RegisterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 047D91C62456DC3F00A6EA98 /* RegisterView.xib */; };
 		6EDD6FD6A4EB78D4CAE50EC9 /* Pods_UTUITestLearning.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A30E0AA9FDB5936CA3952C /* Pods_UTUITestLearning.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +85,17 @@
 		04513C8924551F150018A867 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		04513C8A24551F150018A867 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		04513C90245524580018A867 /* UTUITestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UTUITestPlayground.playground; path = ../UTUITestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		047D91AF2456B40B00A6EA98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		047D91B12456B42000A6EA98 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		047D91B32456B43700A6EA98 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		047D91B62456B59600A6EA98 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		047D91B82456B5BF00A6EA98 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		047D91BA2456B5D000A6EA98 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		047D91BE2456B77900A6EA98 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		047D91C02456B7CE00A6EA98 /* UIFontExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		047D91C22456B9E700A6EA98 /* UserView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserView.xib; sourceTree = "<group>"; };
+		047D91C42456BCE200A6EA98 /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		047D91C62456DC3F00A6EA98 /* RegisterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterView.xib; sourceTree = "<group>"; };
 		4912FC011A888C3D8EACC25A /* Pods-UTUITestLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTUITestLearning.release.xcconfig"; path = "Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning.release.xcconfig"; sourceTree = "<group>"; };
 		5D49013E6836CBE0EC6A8152 /* Pods-UTUITestLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTUITestLearning.debug.xcconfig"; path = "Target Support Files/Pods-UTUITestLearning/Pods-UTUITestLearning.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +129,9 @@
 		0401702C24555E5A00CE6AFC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				047D91AF2456B40B00A6EA98 /* BaseViewController.swift */,
+				047D91B32456B43700A6EA98 /* BaseModel.swift */,
+				047D91B12456B42000A6EA98 /* BaseView.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -123,6 +148,7 @@
 		0401702E24555EBA00CE6AFC /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				047D91B52456B58500A6EA98 /* User */,
 				04513C7B24551DFC0018A867 /* Login */,
 				04513C7A24551DD70018A867 /* Register */,
 			);
@@ -169,6 +195,7 @@
 				04513C8C24551F350018A867 /* Main */,
 				0401702D24555E7700CE6AFC /* Modules */,
 				04513C8D24551F4B0018A867 /* Resources */,
+				047D91BC2456B74100A6EA98 /* Utils */,
 			);
 			path = UTUITestLearning;
 			sourceTree = "<group>";
@@ -200,6 +227,7 @@
 				04513C7E24551E8B0018A867 /* RegisterView.m */,
 				04513C8624551EF20018A867 /* RegisterViewController.h */,
 				04513C8724551EF20018A867 /* RegisterViewController.m */,
+				047D91C62456DC3F00A6EA98 /* RegisterView.xib */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -210,6 +238,7 @@
 				04513C8224551EBE0018A867 /* LoginModel.swift */,
 				04513C8024551EA90018A867 /* LoginView.swift */,
 				04513C8424551EDA0018A867 /* LoginViewController.swift */,
+				047D91C42456BCE200A6EA98 /* LoginView.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -244,6 +273,34 @@
 			name = Playground;
 			sourceTree = "<group>";
 		};
+		047D91B52456B58500A6EA98 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				047D91B62456B59600A6EA98 /* UserModel.swift */,
+				047D91B82456B5BF00A6EA98 /* UserView.swift */,
+				047D91BA2456B5D000A6EA98 /* UserViewController.swift */,
+				047D91C22456B9E700A6EA98 /* UserView.xib */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		047D91BC2456B74100A6EA98 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				047D91BD2456B75D00A6EA98 /* Extensions */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		047D91BD2456B75D00A6EA98 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				047D91BE2456B77900A6EA98 /* UIColorExtensions.swift */,
+				047D91C02456B7CE00A6EA98 /* UIFontExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A6A2136ED7892898DA438B87 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -258,7 +315,6 @@
 				5D49013E6836CBE0EC6A8152 /* Pods-UTUITestLearning.debug.xcconfig */,
 				4912FC011A888C3D8EACC25A /* Pods-UTUITestLearning.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -370,8 +426,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04513C5724551D370018A867 /* LaunchScreen.storyboard in Resources */,
+				047D91C72456DC3F00A6EA98 /* RegisterView.xib in Resources */,
 				04513C5424551D370018A867 /* Assets.xcassets in Resources */,
 				04513C5224551D350018A867 /* Main.storyboard in Resources */,
+				047D91C52456BCE200A6EA98 /* LoginView.xib in Resources */,
+				047D91C32456B9E700A6EA98 /* UserView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,16 +497,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047D91B02456B40B00A6EA98 /* BaseViewController.swift in Sources */,
+				047D91BB2456B5D000A6EA98 /* UserViewController.swift in Sources */,
+				047D91C12456B7CE00A6EA98 /* UIFontExtensions.swift in Sources */,
 				04513C8524551EDA0018A867 /* LoginViewController.swift in Sources */,
 				04513C4F24551D350018A867 /* ViewController.swift in Sources */,
 				04513C8324551EBE0018A867 /* LoginModel.swift in Sources */,
 				04513C7F24551E8B0018A867 /* RegisterView.m in Sources */,
+				047D91BF2456B77900A6EA98 /* UIColorExtensions.swift in Sources */,
 				04513C4B24551D350018A867 /* AppDelegate.swift in Sources */,
 				0401703324555F1F00CE6AFC /* HomeView.swift in Sources */,
 				04513C8124551EA90018A867 /* LoginView.swift in Sources */,
 				04513C8B24551F150018A867 /* RegisterModel.m in Sources */,
+				047D91B42456B43700A6EA98 /* BaseModel.swift in Sources */,
+				047D91B72456B59600A6EA98 /* UserModel.swift in Sources */,
 				04513C4D24551D350018A867 /* SceneDelegate.swift in Sources */,
 				0401703124555F0B00CE6AFC /* HomeModel.swift in Sources */,
+				047D91B92456B5BF00A6EA98 /* UserView.swift in Sources */,
+				047D91B22456B42000A6EA98 /* BaseView.swift in Sources */,
 				04513C8824551EF20018A867 /* RegisterViewController.m in Sources */,
 				0401703524555F3C00CE6AFC /* HomeViewController.swift in Sources */,
 			);

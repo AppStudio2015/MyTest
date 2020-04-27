@@ -1,14 +1,26 @@
 //
-//  HomeViewController.swift
+//  UserViewController.swift
 //  UTUITestLearning
 //
-//  Created by qufei on 2020/4/26.
+//  Created by qufei on 2020/4/27.
 //  Copyright © 2020 qufei. All rights reserved.
 //
 
 import UIKit
 
-class HomeViewController: BaseViewController {
+class UserViewController: BaseViewController {
+    
+    fileprivate lazy var userView: UserView = {
+        let view: UserView = UserView.init(frame: self.view.bounds)
+//        view.delegate = self
+        return view
+    }()
+    
+    // MARK: - Lifecycle
+    override func loadView() {
+        super.loadView()
+        self.view = self.userView
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

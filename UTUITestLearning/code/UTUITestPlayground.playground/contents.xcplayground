@@ -8,6 +8,6 @@
         <page name='05_UTUITest'/>
         <page name='06_AdvancedUTUITest'/>
         <page name='07_ImproveCodeQuality'/>
-        <page name='08_Extension'/>
+        <page name='08_Extensions'/>
     </pages>
 </playground>
