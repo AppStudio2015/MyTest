@@ -38,7 +38,9 @@
  
  ### 测试的目的
    * 对于产品或项目？
+     减少BUG，提高软件的质量或稳定性。
    * 对于开发者？
+     一个任务？一种测试技能？
  
  ### 参考
    * [Engineering for Testability 2017](https://developer.apple.com/videos/play/wwdc2017/414)

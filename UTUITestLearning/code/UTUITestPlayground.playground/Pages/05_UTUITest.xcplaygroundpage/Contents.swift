@@ -57,15 +57,23 @@
 ---
  
  ### 执行原生单元及UI测试
- * 单元及UI测试框架说明
- * Objecive-C 单元及UI测试
- * Swfit单元及UI测试
- * 混编单元及UI测试
+   * 单元及UI测试框架说明
+     + UI测试
+       - XCUIApplication: A proxy for an application that can be launched and terminated.
+       - XCUIElementQuery: A query for locating UI elements.
+       - XCUIElement: A UI element in an application.
+        > On macOS, XCUIElement provides keyboard- and mouse-like interactions such as typing, hovering, clicking, and scrolling. On iOS, XCUIElement provides gestural interactions such as tapping, pressing, swiping, pinching, and rotating.
+ 
+   * Objecive-C 单元及UI测试
+ 
+   * Swfit单元及UI测试
+ 
+   * 混编单元及UI测试
  
  ### 支持显示代码覆盖率
- * 设置显示代码覆盖率
-   1. 设置 **XCODE** ，选择`Target: xxxTests 或 xxxUITests`，选择 `Product` -> `Scheme` -> `Edit Scheme` -> `Test` -> `Options`
-   ![SetCodeCoverage](CodeCoverage01.png)
+   * 设置显示代码覆盖率
+     1. 设置 **XCODE** ，选择`Target: xxxTests 或 xxxUITests`，选择 `Product` -> `Scheme` -> `Edit Scheme` -> `Test` -> `Options`
+     ![SetCodeCoverage](CodeCoverage01.png)
  
 */
 

@@ -7,26 +7,51 @@
 //
 
 #import "RegisterViewController.h"
+#import "RegisterView.h"
 
-@interface RegisterViewController ()
+@interface RegisterViewController ()<RegisterViewDelegate>
+
+@property (nonatomic, strong, nonnull) RegisterView *registerView;
 
 @end
 
 @implementation RegisterViewController
 
+- (void)loadView {
+    [super loadView];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.view = self.registerView;
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - Setters and Getters
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (RegisterView * _Nonnull)registerView {
+    if (_registerView) {
+        return _registerView;
+    }
+    
+//    _registerView = [[RegisterView alloc] initWithFrame:self.view.bounds];
+//    _registerView = [[[NSBundle mainBundle] loadNibNamed:@"RegisterView" owner:self options:nil] lastObject];
+    _registerView = [RegisterView registerView];
+    _registerView.delegate = self;
+    
+    return _registerView;
 }
-*/
+
+#pragma mark - Private Methods
+
+#pragma mark - Public Methods
+
+#pragma mark - RegiserViewDelegate
+
+- (void)registerViewDidClickRegister:(RegisterView *)registerView {
+    [self dismissViewControllerAnimated:YES completion:^{
+        // Finished
+    }];
+}
 
 @end

@@ -12,7 +12,7 @@ class UserViewController: BaseViewController {
     
     fileprivate lazy var userView: UserView = {
         let view: UserView = UserView.init(frame: self.view.bounds)
-//        view.delegate = self
+        view.delegate = self
         return view
     }()
     
@@ -27,16 +27,20 @@ class UserViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension UserViewController: UserViewDelegate {
+    func userViewDidClickAvatar(_ view: UserView) {
+        self.present(SigninViewController(), animated: true) {
+            //Finished
+        }
     }
-    */
-
+    
+    func userView(_ view: UserView, didSelectSettingItemAt index: Int) {
+        let viewController: UserSettingViewController = UserSettingViewController()
+        viewController.title = "Settings"
+        viewController.view.backgroundColor = UIColor.white
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+    }
 }

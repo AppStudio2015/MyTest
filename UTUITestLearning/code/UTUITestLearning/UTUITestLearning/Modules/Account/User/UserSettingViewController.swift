@@ -1,21 +1,21 @@
 //
-//  LoginViewController.swift
+//  UserSettingViewController.swift
 //  UTUITestLearning
 //
-//  Created by qufei on 2020/4/26.
+//  Created by qufei on 2020/4/28.
 //  Copyright © 2020 qufei. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class UserSettingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

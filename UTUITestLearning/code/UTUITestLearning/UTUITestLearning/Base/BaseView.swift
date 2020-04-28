@@ -24,6 +24,15 @@ extension NibLoadable {
     func loadNib() -> TargetView? {return nil}
 }
 
+@objc protocol ObjcNibLoable: NSObjectProtocol {
+    /// Layout view that generate from a nib file
+    
+    @objc optional func layoutNibView() -> Void
+    
+    /// load a nib file
+    @objc optional func loadNib() -> UIView?
+}
+
 // MARK: - BaseView
 class BaseView: UIView {
 

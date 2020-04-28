@@ -8,6 +8,6 @@
 
 import UIKit
 
-class LoginModel: NSObject {
+class SigninModel: NSObject {
 
 }
