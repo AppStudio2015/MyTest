@@ -31,6 +31,7 @@ extension NibLoadable {
     
     /// load a nib file
     @objc optional func loadNib() -> UIView?
+    @objc optional static func initNibView() -> UIView
 }
 
 // MARK: - BaseView

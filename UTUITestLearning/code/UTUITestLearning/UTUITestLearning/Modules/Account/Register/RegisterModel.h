@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface RegisterModel : NSObject
 
+- (void)publicFunc01;
+- (NSString * _Nullable)publicFunc02WithInputParameter:(NSString * _Nullable)parameter;
+
 @end
 
 NS_ASSUME_NONNULL_END

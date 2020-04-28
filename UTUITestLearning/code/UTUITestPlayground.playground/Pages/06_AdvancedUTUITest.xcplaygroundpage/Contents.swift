@@ -9,8 +9,28 @@
  ### 私有函数测试
    * ObjeC
      - 创建分类
+ 
+     ```objc
+     #import "SomeClassHeader.h"
+
+     @interface SomeClass (UnitTest)
+
+     - (NSString * _Nullable)privateFuncWithParameter:(NSString * _Nullable)parameter;
+
+     @end
+ 
+     ```
+ 
    * Swift
      - @testable
+     在主工程的`Target`的`Build Settings`中把`Enable Testability`设置为`YES`
+     > @testable provides access only for “internal” functions; “private” declarations are not visible outside of their file even when using @testable.
+ 
+     ```swift
+ 
+     @testable import SomeModule
+ 
+     ```
  
  ---
  

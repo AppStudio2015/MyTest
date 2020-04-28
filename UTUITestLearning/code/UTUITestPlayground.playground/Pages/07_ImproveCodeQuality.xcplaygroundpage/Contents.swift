@@ -143,6 +143,7 @@
    * [SonarQube 的用法](http://www.imooc.com/article/279446?block_id=tuijian_wz)
    * [自定义代码段和文件模板](http://www.cocoachina.com/articles/25182)
    * [自定义模板文件夹](https://blog.csdn.net/yanhaijunyan/article/details/102922079)
+   * [Swift的世界，如何写好单元测试？](https://www.jianshu.com/p/bb97c8d9f0cb)
  */
 
 

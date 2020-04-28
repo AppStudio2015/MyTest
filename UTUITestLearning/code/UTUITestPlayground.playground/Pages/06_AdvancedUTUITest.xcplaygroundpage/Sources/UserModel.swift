@@ -1,10 +1,4 @@
-//
-//  UserModel.swift
-//  UTUITestLearning
-//
-//  Created by qufei on 2020/4/27.
-//  Copyright © 2020 qufei. All rights reserved.
-//
+//: UserModel
 
 import UIKit
 
@@ -21,11 +15,6 @@ enum UserSettingModel {
 }
 
 class UserModel {
-    
-    var isSignin: Bool = false
-    
-    fileprivate var nickName: String?
-    
     private func privateFunc(parameter: String) {
         print("PrivateFunc")
     }
@@ -48,10 +37,6 @@ extension UserModel {
         let model = UserSettingModel.section0(data)
         return model
     }
-    
-    public func publicFunc() -> Void {
-        print("publicFunc")
-    }
 }
 
 extension UserModel {
@@ -60,20 +45,22 @@ extension UserModel {
     }
 }
 
-//#if DEBUG
-//extension UserModel {
-//    var testNickName: String? {
-//        get {
-//            return self.nickName
-//        }
-//    }
-//
-//    func testFileprivateFunc() {
-//        self.fileprivateFunc()
-//    }
-//
-//    func testPrivateFunc(parameter: String) {
-//        self.privateFunc(parameter: parameter)
-//    }
-//}
-//#endif
+#if DEBUG
+extension UserModel {
+    
+    var testNickName: String? {
+        get {
+            return self.nickName
+        }
+    }
+    
+    func testFileprivateFunc() {
+        self.fileprivateFunc()
+    }
+    
+    func testPrivateFunc(parameter: String) {
+        self.privateFunc(parameter: parameter)
+    }
+}
+#endif
+
