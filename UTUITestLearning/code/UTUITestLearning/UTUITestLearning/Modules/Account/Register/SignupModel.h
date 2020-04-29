@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 用户注册模型
-@interface RegisterModel : NSObject
+@interface SignupModel : NSObject
 
 /// 公有实例示例方法
 - (void)publicFunc01;

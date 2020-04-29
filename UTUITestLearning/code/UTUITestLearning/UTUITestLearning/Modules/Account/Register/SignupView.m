@@ -1,24 +1,24 @@
 //
-//  RegisterView.m
+//  SignupView.m
 //  UTUITestLearning
 //
 //  Created by qufei on 2020/4/26.
 //  Copyright © 2020 qufei. All rights reserved.
 //
 
-#import "RegisterView.h"
+#import "SignupView.h"
 #import "UTUITestLearning-Swift.h"
 
-@interface RegisterView()<ObjcNibLoable>
+@interface SignupView()<ObjcNibLoable>
 
 @end
 
-@implementation RegisterView
+@implementation SignupView
 
 #pragma mark - Lifecycle
 
 + (instancetype)registerView {
-    NSString *nibName = NSStringFromClass(RegisterView.class);
+    NSString *nibName = NSStringFromClass(SignupView.class);
     return [[[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil] lastObject];
 }
 
@@ -65,8 +65,8 @@
 /// 注册按钮点击处理
 /// @param sender 注册按钮
 - (IBAction)didClickRegisterButton:(UIButton *)sender {
-    if (self.delegate && [self.delegate respondsToSelector:@selector(registerViewDidClickRegister:)]) {
-        [self.delegate registerViewDidClickRegister:self];
+    if (self.delegate && [self.delegate respondsToSelector:@selector(signupViewDidClickSignup:)]) {
+        [self.delegate signupViewDidClickSignup:self];
     }
 }
 

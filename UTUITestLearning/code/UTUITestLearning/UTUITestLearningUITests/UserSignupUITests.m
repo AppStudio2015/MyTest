@@ -1,21 +1,14 @@
 //
-//  RegisterModelTests.m
-//  UTUITestLearningTests
+//  UserSignupUITests.m
+//  UTUITestLearningUITests
 //
-//  Created by Qufei on 2020/4/28.
+//  Created by qufei on 2020/4/29.
 //  Copyright © 2020 qufei. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
-#import "RegisterModel.h"
 
-@interface RegisterModel(UnitTest)
-
-- (NSString * _Nullable)privateFunc01WithInputParameter:(NSString * _Nullable)parameter;
-
-@end
-
-@interface RegisterModelTests : XCTestCase
+@interface UserSignupUITests : XCTestCase
 
 /// 进入指定界面
 - (void)enterSpecificViewWaitSeconds:(unsigned int)seconds;
@@ -28,10 +21,18 @@
 
 @end
 
-@implementation RegisterModelTests
+@implementation UserSignupUITests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    // In UI tests it is usually best to stop immediately when a failure occurs.
+    self.continueAfterFailure = NO;
+
+    // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
+    [[[XCUIApplication alloc] init] launch];
+
+    // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
 
 - (void)tearDown {
@@ -39,18 +40,8 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
+    // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
-    RegisterModel *model = [[RegisterModel alloc] init];
-    NSString * result = [model privateFunc01WithInputParameter:nil];
-    XCTAssertTrue([result isEqualToString:@"Prviate func has no parameter"]);
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
 }
 
 /// 进入特定视图

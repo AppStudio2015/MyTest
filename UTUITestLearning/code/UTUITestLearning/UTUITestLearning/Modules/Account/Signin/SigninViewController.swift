@@ -37,7 +37,7 @@ extension SigninViewController: SiginViewDelegate {
         }
     }
     func siginViewDidClickRegister(_ signinView: SigninView) {
-        let viewController = RegisterViewController()
+        let viewController = SignupViewController()
         self.present(viewController, animated: true) {
             // Finished
         }
