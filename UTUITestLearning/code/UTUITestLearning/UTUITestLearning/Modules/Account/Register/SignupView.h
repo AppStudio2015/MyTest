@@ -1,5 +1,5 @@
 //
-//  RegisterView.h
+//  SignupView.h
 //  UTUITestLearning
 //
 //  Created by qufei on 2020/4/26.
@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@class RegisterView;
+@class SignupView;
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - RegisterViewDelegate
 
 /// 注册视图代理
-@protocol RegisterViewDelegate<NSObject>
+@protocol SignupViewDelegate<NSObject>
 
 @optional
 
 /// 注册点击回调
-/// @param registerView 注册视图
-- (void)registerViewDidClickRegister:(RegisterView *)registerView;
+/// @param signupView  注册视图
+- (void)signupViewDidClickSignup:(SignupView *)signupView;
 
 @end
 
@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 #pragma mark - RegisterView
 
 /// 注册视图
-@interface RegisterView : UIView
+@interface SignupView : UIView
 
 /// 手机号输入框
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumTextField;
@@ -44,7 +44,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UIButton *registerButton;
 
 /// 代理
-@property (nonatomic, weak) id<RegisterViewDelegate> delegate;
+@property (nonatomic, weak) id<SignupViewDelegate> delegate;
 
 #pragma mark - Initialization
 

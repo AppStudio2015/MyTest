@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.h
+//  SignupViewController.h
 //  UTUITestLearning
 //
 //  Created by qufei on 2020/4/26.
@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /// 注册视图控制器
-@interface RegisterViewController : UIViewController
+@interface SignupViewController : UIViewController
 
 @end
 
