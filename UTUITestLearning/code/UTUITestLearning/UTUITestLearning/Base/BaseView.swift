@@ -11,26 +11,23 @@ import UIKit
 // MARK: - NibLoadable
 protocol NibLoadable {
     associatedtype TargetView
-    
     /// Layout view that generate from a nib file
-    func layoutNibView() -> Void
-    
+    func layoutNibView()
     /// load a nib file
     func loadNib() -> TargetView?
 }
 
 extension NibLoadable {
-    func layoutNibView() -> Void {}
-    func loadNib() -> TargetView? {return nil}
+    func layoutNibView() {}
+    func loadNib() -> TargetView? { return nil }
 }
 
 @objc protocol ObjcNibLoable: NSObjectProtocol {
     /// Layout view that generate from a nib file
-    
-    @objc optional func layoutNibView() -> Void
-    
+    @objc optional func layoutNibView()
     /// load a nib file
     @objc optional func loadNib() -> UIView?
+    /// Initialization
     @objc optional static func initNibView() -> UIView
 }
 
@@ -49,7 +46,6 @@ class BaseView: UIView {
 
 extension BaseView: NibLoadable {
     typealias TargetView = UIView
-    
     /// Layout the view that generates from a nib file
     public func layoutNibView() {
         guard let view = self.loadNib() else {
@@ -58,7 +54,6 @@ extension BaseView: NibLoadable {
         view.frame = self.bounds
         self.addSubview(view)
     }
-    
     /// Generate an UIView from Nib
     /// - Returns: a target view
     public func loadNib() -> TargetView? {
@@ -67,7 +62,9 @@ extension BaseView: NibLoadable {
             return nil
         }
         let nib = UINib(nibName: nibName, bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        guard let view: UIView = nib.instantiate(withOwner: self, options: nil).first as? UIView else {
+            return nil
+        }
         return view
     }
 }

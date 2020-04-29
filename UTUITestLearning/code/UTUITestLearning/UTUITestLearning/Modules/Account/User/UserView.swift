@@ -12,11 +12,9 @@ import UIKit
 
 /// 用户视图代理
 protocol UserViewDelegate: NSObjectProtocol {
-    
     /// 头像点击回调
     /// - Parameter view: 用户视图
     func userViewDidClickAvatar(_ view: UserView)
-    
     /// 设置列表点击回调
     /// - Parameters:
     ///   - view: 用户视图
@@ -28,7 +26,6 @@ protocol UserViewDelegate: NSObjectProtocol {
 
 /// 用户视图
 class UserView: BaseView {
-    
     /// 头像
     @IBOutlet weak var avatarBtn: UIButton! {
         didSet {
@@ -39,10 +36,8 @@ class UserView: BaseView {
             }
         }
     }
-    
     /// 昵称
     @IBOutlet weak var nickName: UILabel!
-    
     /// 设置列表
     @IBOutlet weak var settingTableView: UITableView! {
         didSet {
@@ -53,23 +48,18 @@ class UserView: BaseView {
             }
         }
     }
-    
     /// 代理
     public weak var delegate: UserViewDelegate?
-    
     /// 默认设置项
     fileprivate lazy var settingModel: UserSettingModel = {
         let model = UserModel.defaultSettingModel()
         return model
     }()
-    
     // MARK: - Lifecycle
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layoutNibView()
     }
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.layoutNibView()
@@ -78,11 +68,10 @@ class UserView: BaseView {
 
 // MARK: - Target Actions
 extension UserView {
-    
     /// 头像点击处理
     /// - Parameter button: 头像按钮
     /// - Returns: 无
-    @objc fileprivate func didClickAvatar(_ button: UIButton) -> Void {
+    @objc fileprivate func didClickAvatar(_ button: UIButton) {
         print("Avatar Clicked.")
         self.delegate?.userViewDidClickAvatar(self)
     }
@@ -93,7 +82,6 @@ extension UserView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch settingModel {
         case .section0(let models):
@@ -102,11 +90,9 @@ extension UserView: UITableViewDataSource {
             return 0
         }
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "Cell")
         if cell == nil {
@@ -122,7 +108,6 @@ extension UserView: UITableViewDataSource {
             cell.textLabel?.text = "Title"
             cell.detailTextLabel?.text = "Detail"
         }
-        
         return cell
     }
 }
@@ -133,4 +118,3 @@ extension UserView: UITableViewDelegate {
         self.delegate?.userView(self, didSelectSettingItemAt: indexPath.row)
     }
 }
-
