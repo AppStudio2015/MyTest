@@ -7,6 +7,7 @@
    * TestPlan（测试计划）
  
  ---
+ 
  ### 命令行方式
    1. Build and run unit test
  
@@ -37,11 +38,12 @@
        $ xcodebuild test -workspace MyApplication.xcworkspace -scheme iOSApp -destination 'platform=iOS,name=iPhone' -skip-testing:iOSAppUITests
    
        $ xcodebuild test -workspace MyApplication.xcworkspace -scheme iOSApp -destination 'platform=iOS,name=iPhone' -only-testing:iOSAppTests/SecondTestClass/testExampleB
-   
-    ```
+   ```
  
  ---
+
  ### 私有函数测试
+ 
    * ObjeC
      - 创建分类
  

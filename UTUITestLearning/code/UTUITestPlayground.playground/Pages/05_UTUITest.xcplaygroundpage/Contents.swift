@@ -56,12 +56,19 @@
  
 ---
  
- ### 执行原生单元及UI测试
+ ### 执行 XCTest
+ 
    * Objecive-C 单元及UI测试
+ 
+     参考 `UTUITestLearning` 项目中 `RegisterModelTests.m`
  
    * Swfit单元及UI测试
  
+     参考 `UTUITestLearning` 项目中 `UTUITestLearningTests.swift`
+ 
    * 混编单元及UI测试
+ 
+     参考 `UTUITestLearning` 项目
  
  ---
  
@@ -81,13 +88,23 @@
      ![CodeCoverage05](CodeCoverage05.png)
  
  ---
- ### 测试结果文件
-   * 路径 /Users/{username}/Library/Developer/Xcode/DerivedData/UTUITestLearning-biextvvthrsptqeltatuqbjfovcl/Logs/Test
  
-   ![XCTestResult00]()
-   * 文件 <target>-<date>-+<number>.xcresult
+
+ ### 测试结果文件
+   * 路径:
+ 
+     /Users/{username}/Library/Developer/Xcode/DerivedData/UTUITestLearning-biextvvthrsptqeltatuqbjfovcl/Logs/Test
+
+   * 文件:  <target>-<date>-+<number>.xcresult
+ 
+   ![XCTestResult01](XCTestResult01.png)
+
+   * <target>-<date>-+<number>.xcresult 内容：
+ 
+   ![XCTestResult02](XCTestResult02.png)
  
  ---
+ 
  ### 参考
    * [Testing with Xcode](https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/01-introduction.html#//apple_ref/doc/uid/TP40014132-CH1-SW1)
    * [Testing Your Apps in Xcode](https://developer.apple.com/documentation/xcode/testing_your_apps_in_xcode)

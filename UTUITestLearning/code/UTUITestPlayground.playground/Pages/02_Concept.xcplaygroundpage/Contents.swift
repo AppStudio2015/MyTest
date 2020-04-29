@@ -115,7 +115,6 @@ testC4(a: false, b: true)
 testC4(a: false, b: false)
 
 /*:
- ---
  ### XCTest
    * 概念 : Apple提供的`测试框架`，可以使用`XCODE`来创建并运行单元测试，性能测试和UI测试。
  
