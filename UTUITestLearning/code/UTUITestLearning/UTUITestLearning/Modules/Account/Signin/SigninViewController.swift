@@ -8,13 +8,17 @@
 
 import UIKit
 
+/// 登录视图控制器
 class SigninViewController: UIViewController {
     
+    /// 登录视图
     fileprivate lazy var signinView: SigninView = {
         let view = SigninView.init(frame: self.view.bounds)
         view.delegate = self
         return view
     }()
+    
+    // MARK: - Lifecycle
     
     override func loadView() {
         super.loadView()
@@ -28,6 +32,7 @@ class SigninViewController: UIViewController {
     }
 }
 
+// MARK: - SiginViewDelegate
 extension SigninViewController : SiginViewDelegate {
     
     func siginViewDidClickSignin(_ signinView: SigninView) {
@@ -42,6 +47,4 @@ extension SigninViewController : SiginViewDelegate {
             // Finished
         }
     }
-    
-    
 }

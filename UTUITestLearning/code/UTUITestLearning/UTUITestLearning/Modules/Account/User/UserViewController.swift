@@ -8,8 +8,10 @@
 
 import UIKit
 
+/// 用户视图控制器
 class UserViewController: BaseViewController {
     
+    /// 用户视图
     fileprivate lazy var userView: UserView = {
         let view: UserView = UserView.init(frame: self.view.bounds)
         view.delegate = self
@@ -28,6 +30,8 @@ class UserViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
 }
+
+// MARK: - UserViewDelegate
 
 extension UserViewController: UserViewDelegate {
     func userViewDidClickAvatar(_ view: UserView) {

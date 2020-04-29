@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 主页视图控制器
 class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
@@ -15,16 +16,4 @@ class HomeViewController: BaseViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

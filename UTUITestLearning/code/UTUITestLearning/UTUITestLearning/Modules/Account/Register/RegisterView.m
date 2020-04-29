@@ -48,6 +48,9 @@
 }
 
 #pragma mark - Setters and Getters
+
+/// 设置注册按钮
+/// @param registerButton 注册按钮
 - (void)setRegisterButton:(UIButton *)registerButton {
     if (_registerButton == nil) {
         registerButton.layer.cornerRadius = 6;
@@ -59,6 +62,8 @@
 
 #pragma mark - Target Actions
 
+/// 注册按钮点击处理
+/// @param sender 注册按钮
 - (IBAction)didClickRegisterButton:(UIButton *)sender {
     if (self.delegate && [self.delegate respondsToSelector:@selector(registerViewDidClickRegister:)]) {
         [self.delegate registerViewDidClickRegister:self];

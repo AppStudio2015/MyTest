@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 用户登录模型
 class SigninModel: NSObject {
 
 }

@@ -13,10 +13,14 @@
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - RegisterViewDelegate
+
+/// 注册视图代理
 @protocol RegisterViewDelegate<NSObject>
 
 @optional
 
+/// 注册点击回调
+/// @param registerView 注册视图
 - (void)registerViewDidClickRegister:(RegisterView *)registerView;
 
 @end
@@ -24,6 +28,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - RegisterView
 
+/// 注册视图
 @interface RegisterView : UIView
 
 /// 手机号输入框
@@ -43,6 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - Initialization
 
+/// 类实例化方法
 + (instancetype _Nullable)registerView;
 
 @end

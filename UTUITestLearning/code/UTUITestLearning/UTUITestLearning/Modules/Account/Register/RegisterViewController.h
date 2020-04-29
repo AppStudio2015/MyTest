@@ -10,6 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 注册视图控制器
 @interface RegisterViewController : UIViewController
 
 @end

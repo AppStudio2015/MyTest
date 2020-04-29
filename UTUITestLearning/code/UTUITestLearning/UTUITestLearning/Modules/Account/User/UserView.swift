@@ -9,14 +9,27 @@
 import UIKit
 
 // MARK: - UserViewDelegate
+
+/// 用户视图代理
 protocol UserViewDelegate: NSObjectProtocol {
+    
+    /// 头像点击回调
+    /// - Parameter view: 用户视图
     func userViewDidClickAvatar(_ view: UserView)
+    
+    /// 设置列表点击回调
+    /// - Parameters:
+    ///   - view: 用户视图
+    ///   - index: 点击索引
     func userView(_ view: UserView, didSelectSettingItemAt index: Int)
 }
 
 // MARK: - UserView
-class UserView: BaseView {
 
+/// 用户视图
+class UserView: BaseView {
+    
+    /// 头像
     @IBOutlet weak var avatarBtn: UIButton! {
         didSet {
             if oldValue == nil {
@@ -27,8 +40,10 @@ class UserView: BaseView {
         }
     }
     
+    /// 昵称
     @IBOutlet weak var nickName: UILabel!
     
+    /// 设置列表
     @IBOutlet weak var settingTableView: UITableView! {
         didSet {
             if oldValue == nil {
@@ -39,8 +54,10 @@ class UserView: BaseView {
         }
     }
     
+    /// 代理
     public weak var delegate: UserViewDelegate?
     
+    /// 默认设置项
     fileprivate lazy var settingModel: UserSettingModel = {
         let model = UserModel.defaultSettingModel()
         return model
@@ -59,14 +76,19 @@ class UserView: BaseView {
     }
 }
 
+// MARK: - Target Actions
 extension UserView {
     
+    /// 头像点击处理
+    /// - Parameter button: 头像按钮
+    /// - Returns: 无
     @objc fileprivate func didClickAvatar(_ button: UIButton) -> Void {
         print("Avatar Clicked.")
         self.delegate?.userViewDidClickAvatar(self)
     }
 }
 
+// MARK: - UITableViewDataSource
 extension UserView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -105,6 +127,7 @@ extension UserView: UITableViewDataSource {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension UserView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.userView(self, didSelectSettingItemAt: indexPath.row)

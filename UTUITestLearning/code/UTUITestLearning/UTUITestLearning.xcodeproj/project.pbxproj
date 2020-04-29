@@ -26,6 +26,7 @@
 		04513C8524551EDA0018A867 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8424551EDA0018A867 /* SigninViewController.swift */; };
 		04513C8824551EF20018A867 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8724551EF20018A867 /* RegisterViewController.m */; };
 		04513C8B24551F150018A867 /* RegisterModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8A24551F150018A867 /* RegisterModel.m */; };
+		0459352024592B3A00688247 /* UserSigninUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459351F24592B3A00688247 /* UserSigninUITests.swift */; };
 		0462E642245869DF008E758C /* RegisterModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462E641245869DF008E758C /* RegisterModelTests.m */; };
 		047D91B02456B40B00A6EA98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91AF2456B40B00A6EA98 /* BaseViewController.swift */; };
 		047D91B22456B42000A6EA98 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B12456B42000A6EA98 /* BaseView.swift */; };
@@ -90,6 +91,7 @@
 		04513C8924551F150018A867 /* RegisterModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterModel.h; sourceTree = "<group>"; };
 		04513C8A24551F150018A867 /* RegisterModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModel.m; sourceTree = "<group>"; };
 		04513C90245524580018A867 /* UTUITestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UTUITestPlayground.playground; path = ../UTUITestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0459351F24592B3A00688247 /* UserSigninUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninUITests.swift; sourceTree = "<group>"; };
 		0462E640245869DF008E758C /* UTUITestLearningTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UTUITestLearningTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0462E641245869DF008E758C /* RegisterModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterModelTests.m; sourceTree = "<group>"; };
 		047D91AF2456B40B00A6EA98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -156,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				047D91B52456B58500A6EA98 /* User */,
-				04513C7B24551DFC0018A867 /* Login */,
+				04513C7B24551DFC0018A867 /* Signin */,
 				04513C7A24551DD70018A867 /* Register */,
 			);
 			path = Account;
@@ -222,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				04513C6C24551D370018A867 /* UTUITestLearningUITests.swift */,
+				0459351F24592B3A00688247 /* UserSigninUITests.swift */,
 				04513C6E24551D370018A867 /* Info.plist */,
 			);
 			path = UTUITestLearningUITests;
@@ -241,7 +244,7 @@
 			path = Register;
 			sourceTree = "<group>";
 		};
-		04513C7B24551DFC0018A867 /* Login */ = {
+		04513C7B24551DFC0018A867 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
 				04513C8224551EBE0018A867 /* SigninModel.swift */,
@@ -249,7 +252,7 @@
 				04513C8424551EDA0018A867 /* SigninViewController.swift */,
 				047D91C42456BCE200A6EA98 /* SigninView.xib */,
 			);
-			path = Login;
+			path = Signin;
 			sourceTree = "<group>";
 		};
 		04513C8C24551F350018A867 /* Main */ = {
@@ -547,6 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0459352024592B3A00688247 /* UserSigninUITests.swift in Sources */,
 				04513C6D24551D370018A867 /* UTUITestLearningUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -753,6 +757,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearningTests/Info.plist;
@@ -780,6 +785,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearningTests/Info.plist;
@@ -804,6 +810,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearningUITests/Info.plist;
@@ -826,6 +833,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearningUITests/Info.plist;

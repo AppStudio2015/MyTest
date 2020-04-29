@@ -9,6 +9,9 @@
 import UIKit
 
 extension UIFont {
+    
+    /// Regular font 18
+    /// - Returns: UIFont
     class func regularFont18() -> UIFont {
         return UIFont.systemFont(ofSize: 18, weight: .regular)
     }

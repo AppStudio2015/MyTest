@@ -10,9 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// 用户注册模型
 @interface RegisterModel : NSObject
 
+/// 公有实例示例方法
 - (void)publicFunc01;
+
+/// 公有实例示例方法
+/// @param parameter 参数
 - (NSString * _Nullable)publicFunc02WithInputParameter:(NSString * _Nullable)parameter;
 
 @end

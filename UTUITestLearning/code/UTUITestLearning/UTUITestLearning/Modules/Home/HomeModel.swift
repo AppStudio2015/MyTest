@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// 主页模型
 class HomeModel: NSObject {
 
 }

@@ -11,11 +11,14 @@
 
 @interface RegisterViewController ()<RegisterViewDelegate>
 
+/// 注册视图
 @property (nonatomic, strong, nonnull) RegisterView *registerView;
 
 @end
 
 @implementation RegisterViewController
+
+#pragma mark - Lifecycle
 
 - (void)loadView {
     [super loadView];
@@ -29,6 +32,7 @@
 
 #pragma mark - Setters and Getters
 
+/// 注册视图
 - (RegisterView * _Nonnull)registerView {
     if (_registerView) {
         return _registerView;

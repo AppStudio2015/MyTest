@@ -11,6 +11,7 @@
 @implementation RegisterModel
 
 #pragma mark - Public Methods
+
 - (void)publicFunc01 {
     NSLog(@"%s", __FUNCTION__);
 }
@@ -28,6 +29,8 @@
 
 #pragma mark - Private Methods
 
+/// 私有实例示例方法
+/// @param parameter 参数
 - (NSString * _Nullable)privateFunc01WithInputParameter:(NSString * _Nullable)parameter {
     NSString *tmpStr = nil;
     if (parameter) {
