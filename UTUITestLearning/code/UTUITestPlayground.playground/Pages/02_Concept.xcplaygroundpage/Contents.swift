@@ -115,80 +115,142 @@ testC4(a: false, b: true)
 testC4(a: false, b: false)
 
 /*:
+ ---
  ### XCTest
    * 概念 : Apple提供的`测试框架`，可以使用`XCODE`来创建并运行单元测试，性能测试和UI测试。
+ 
+   * 单元及UI测试框架说明
+     + XCTestCase: The primary class for defining test cases, test methods, and performance tests.
+ 
+     + Unit Test
+ 
+     + UI Test
+       - XCUIApplication: A proxy for an application that can be launched and terminated.
+       - XCUIElementQuery: A query for locating UI elements.
+       - XCUIElement: A UI element in an application.
+        > On macOS, XCUIElement provides keyboard- and mouse-like interactions such as typing, hovering, clicking, and scrolling. On iOS, XCUIElement provides gestural interactions such as tapping, pressing, swiping, pinching, and rotating.
+     
+     + Test Assertions
+       - Boolean Assertions
+       - Nil and Non-nil Assertions
+       - Equality and Inequality Assertions
+       - Comparable Value Assertions
+       - Error Assertions
+       - Failing Unconditionally
+ 
+ 
+    * 测试步骤
+ 
+      Add tests to your Xcode project by writing one or more test methods, each of which verifies a specific aspect of your code. Group related test methods into test cases, each of which is a subclass of XCTestCase.
+      - To add tests to your project:
+      - Create a new subclass of XCTestCase within a test target.
+      - Add one or more test methods to the test case.
+      - Add one or more test assertions to each test method.
  
    * Unit Test 代码结构
  
   ```
-     import XCTest
-     @testable import UTUITestLearning
+         import XCTest
+         @testable import UTUITestLearning
 
-     class UTUITestLearningTests: XCTestCase {
+         class UTUITestLearningTests: XCTestCase {
 
-         override func setUpWithError() throws {
-             // Put setup code here. This method is called before the invocation of each test method in the class.
-         }
-
-         override func tearDownWithError() throws {
-             // Put teardown code here. This method is called after the invocation of each test method in the class.
-         }
-
-         func testExample() throws {
-             // This is an example of a functional test case.
-             // Use XCTAssert and related functions to verify your tests produce the correct results.
-         }
-
-         func testPerformanceExample() throws {
-             // This is an example of a performance test case.
-             self.measure {
-                 // Put the code you want to measure the time of here.
+             override func setUpWithError() throws {
+                 // Put setup code here. This method is called before the invocation of each test method in the class.
              }
-         }
 
-     }
+             override func tearDownWithError() throws {
+                 // Put teardown code here. This method is called after the invocation of each test method in the class.
+             }
+
+             func testExample() throws {
+                 // This is an example of a functional test case.
+                 // Use XCTAssert and related functions to verify your tests produce the correct results.
+             }
+
+             func testPerformanceExample() throws {
+                 // This is an example of a performance test case.
+                 self.measure {
+                     // Put the code you want to measure the time of here.
+                 }
+             }
+
+         }
    ```
  
    * UI Test 代码结构
  
    ```
-    import XCTest
+        import XCTest
 
-    class UTUITestLearningUITests: XCTestCase {
+        class UTUITestLearningUITests: XCTestCase {
 
-       override func setUpWithError() throws {
-           // Put setup code here. This method is called before the invocation of each test method in the class.
+           override func setUpWithError() throws {
+               // Put setup code here. This method is called before the invocation of each test method in the class.
 
-           // In UI tests it is usually best to stop immediately when a failure occurs.
-           continueAfterFailure = false
+               // In UI tests it is usually best to stop immediately when a failure occurs.
+               continueAfterFailure = false
 
-           // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-       }
+               // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+           }
 
-       override func tearDownWithError() throws {
-           // Put teardown code here. This method is called after the invocation of each test method in the class.
-       }
+           override func tearDownWithError() throws {
+               // Put teardown code here. This method is called after the invocation of each test method in the class.
+           }
 
-       func testExample() throws {
-           // UI tests must launch the application that they test.
-           let app = XCUIApplication()
-           app.launch()
+           func testExample() throws {
+               // UI tests must launch the application that they test.
+               let app = XCUIApplication()
+               app.launch()
 
-           // Use recording to get started writing UI tests.
-           // Use XCTAssert and related functions to verify your tests produce the correct results.
-       }
+               // Use recording to get started writing UI tests.
+               // Use XCTAssert and related functions to verify your tests produce the correct results.
+           }
 
-       func testLaunchPerformance() throws {
-           if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-               // This measures how long it takes to launch your application.
-               measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                   XCUIApplication().launch()
+           func testLaunchPerformance() throws {
+               if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
+                   // This measures how long it takes to launch your application.
+                   measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
+                       XCUIApplication().launch()
+                   }
                }
            }
-       }
-    }
+        }
    ```
  
+   * 编写及命名
+     > Test case and test method names are used in Xcode’s test navigator and integration reports to group and identify tests.
+     To help clarify the organization of your tests, give each test case a name that summarizes the tests within it, such as TableValidationTests, NetworkReachabilityTests, or JSONParsingTests.
+     To help identify failing tests, give each test method a name that makes it clear what is tested by that method, such as testEmptyTableRowAndColumnCount(), testUnreachableURLAccessThrowsAnError(), or testUserJSONFeedParsing().
+     
+     > 测试函数的排序规则是按`数字、字母`顺序进行排序，如果想按理想顺序执行，可以考虑在命名时添加相应的`数字或字母`，如
+     ```
+     func test01UserJSONFeedParsing(){...}
+ 
+     func test02UnreachableURLAccessThrowsAnError(){..}
+     ```
+ 
+   * 执行测试
+     1. 执行测试方法
+       - 在测试代码中，在每个`测试方法`前点击`▶️`执行。
+       - 在`Show the Test navigator`中，点击每个`测试方法`后面的`▶️`执行。
+       ![XCTestExecute00](XCTestExecute00.png)
+ 
+     2. 执行多个测试方法
+       - 在测试代码中，在每个`测试类`前点击`▶️`执行。
+       - 在`Show the Test navigator`中，点击每个`测试类`后面的`▶️`执行。
+       ![XCTestExecute00](XCTestExecute00.png)
+ 
+   * 查看结果
+     1. 在`Show the Test navigator`中查看。
+ 
+     ![XCTestResult00](XCTestResult00.png)
+ 
+     2. 在`Show the Report navigator`中查看。
+ 
+     ![XCTestResult01](XCTestResult01.png)
+ 
+ ---
  ### 参考
    * [XCTest](https://developer.apple.com/documentation/xctest)
    * [Testing in Xcode 2019](https://developer.apple.com/videos/play/wwdc2019/413/)

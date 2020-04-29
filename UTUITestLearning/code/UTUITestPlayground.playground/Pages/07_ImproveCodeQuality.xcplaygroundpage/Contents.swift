@@ -121,21 +121,22 @@
    * SonarQube
      简介：是一款用于代码质量管理的开源工具，它主要用于管理源代码的质量。当前流行的编程语文基本都支持，Sonar可以通过PMD,CheckStyle,Findbugs等等代码规则检测工具来检测你的代码，帮助你发现代码的漏洞，Bug，异味等信息。
 
- ![SonarQuber](SonarQube.png)
+   ![SonarQuber](SonarQube.png)
  
  ---
  
  ### 总结
    * 单元或UI测试对于开发者的意义
-     - 培养良好的编程习惯。
+     - 培养良好的编程习惯，TDD。
      - 提升程序设计、架构、重构能力。
-     - 编写可测试的程序（程序）！
+     - 编写可测试的代码（程序）！
      - 为了我们下一次更好更好的开发！
  
  ---
  
  ### 参考
-   * [参考Raywenderlich](https://github.com/raywenderlich/swift-style-guide)
+   * [Raywenderlich objective-c-style-guide](https://github.com/raywenderlich/objective-c-style-guide)
+   * [Raywenderlich swift-style-guide](https://github.com/raywenderlich/swift-style-guide)
    * [API Design Guidelines](https://swift.org/documentation/api-design-guidelines/)
    * [OCLint](http://oclint.org)
    * [SwiftLint](https://realm.github.io/SwiftLint)

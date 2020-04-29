@@ -53,7 +53,7 @@
     }];
 }
 
-/// 进入群组导航
+/// 进入特定视图
 /// @param seconds 停留时长
 - (void)enterSpecificViewWaitSeconds:(unsigned int)seconds {
     sleep(seconds);
