@@ -10,13 +10,10 @@ import UIKit
 
 /// 设置列表项模式
 struct UserSettingData {
-    
     /// 图标
     var icon: UIImage?
-    
     /// 标题
     var title: String?
-    
     /// 描述
     var detail: String?
 }
@@ -30,13 +27,10 @@ enum UserSettingModel {
 
 /// 用户模型
 class UserModel {
-    
     /// 是否登录
     var isSignin: Bool = false
-    
     /// 昵称
     fileprivate var nickName: String?
-    
     /// 私有示例方法
     /// - Parameter parameter: 参数
     private func privateFunc(parameter: String) {
@@ -45,7 +39,6 @@ class UserModel {
 }
 
 extension UserModel {
-    
     /// 获取默认设置项数据
     /// - Returns: 默认设置项数据
     class func defaultSettingModel() -> UserSettingModel {
@@ -64,19 +57,17 @@ extension UserModel {
         let model = UserSettingModel.section0(data)
         return model
     }
-    
     /// 公有示例方法
     /// - Returns: 无
-    public func publicFunc() -> Void {
+    public func publicFunc() {
         print("publicFunc")
     }
 }
 
 extension UserModel {
-    
     /// 文件内私有示例方法
     /// - Returns: 无
-    fileprivate func fileprivateFunc() -> Void {
+    fileprivate func fileprivateFunc() {
         print("fileprivateFunc")
     }
 }

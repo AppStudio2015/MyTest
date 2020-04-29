@@ -44,7 +44,6 @@ class UTUITestLearningUITests: XCTestCase {
         registerButton.tap()
         sleep(1)
     }
-    
     func test02EnterSigninView() {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()
@@ -60,7 +59,6 @@ class UTUITestLearningUITests: XCTestCase {
         let siginButton = app.buttons["登录"]
         siginButton.tap()
     }
-    
     func test03EnterSettingView() {
         self.enterUserView()
         sleep(1)
@@ -86,11 +84,9 @@ extension UTUITestLearningUITests {
     fileprivate func launchApp() {
         app.launch()
     }
-    
     fileprivate func terminateApp() {
         app.terminate()
     }
-    
     fileprivate func enterUserView() {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()

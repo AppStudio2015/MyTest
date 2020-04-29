@@ -9,7 +9,6 @@
 import UIKit
 
 extension UIColor {
-    
     /// 随机颜色
     open class var randomColor: UIColor {
         get {

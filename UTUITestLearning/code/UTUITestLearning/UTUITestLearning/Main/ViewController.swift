@@ -17,7 +17,7 @@ class ViewController: UITabBarController {
         let naviController = UINavigationController.init(rootViewController: viewController)
         naviController.navigationBar.barTintColor = UIColor.blue
         naviController.navigationBar.topItem?.title = "Home"
-        naviController.navigationBar.titleTextAttributes = [.foregroundColor:UIColor.white]
+        naviController.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         
         return naviController
     }()
@@ -28,7 +28,6 @@ class ViewController: UITabBarController {
         self.setTabBarItem(&viewController.tabBarItem, title: "User", selectedImageName: "", normalImageName: "")
         let naviController = UINavigationController.init(rootViewController: viewController)
         naviController.navigationBar.topItem?.title = "User"
-        
         return naviController
     }()
 
@@ -43,13 +42,22 @@ class ViewController: UITabBarController {
 }
 
 extension ViewController {
-    
-    fileprivate func createViewControllers() -> Void {
-        
+    /// <#Description#>
+    /// - Returns: <#description#>
+    fileprivate func createViewControllers() {
         self.viewControllers = [self.homeNaviController, self.userNaviController]
     }
-    
-    fileprivate func setTabBarItem(_ tabBarItem: inout UITabBarItem, title: String, selectedImageName: String,  normalImageName: String) -> Void {
+    /// <#Description#>
+    /// - Parameters:
+    ///   - tabBarItem: <#tabBarItem description#>
+    ///   - title: <#title description#>
+    ///   - selectedImageName: <#selectedImageName description#>
+    ///   - normalImageName: <#normalImageName description#>
+    /// - Returns: <#description#>
+    fileprivate func setTabBarItem(_ tabBarItem: inout UITabBarItem,
+                                   title: String,
+                                   selectedImageName: String,
+                                   normalImageName: String) {
         let selectedTabBarImage: UIImage? = UIImage.init(named: selectedImageName)
         selectedTabBarImage?.withRenderingMode(.alwaysOriginal)
         let normalTabBarImage: UIImage? = UIImage.init(named: normalImageName)
@@ -57,17 +65,20 @@ extension ViewController {
 
         tabBarItem = UITabBarItem.init(title: title, image: normalTabBarImage, selectedImage: selectedTabBarImage)
     }
-    
-    fileprivate func setTabBarItemThemeWith(color normalColor: UIColor, selectedColor: UIColor) -> Void {
-        
+    /// <#Description#>
+    /// - Parameters:
+    ///   - normalColor: <#normalColor description#>
+    ///   - selectedColor: <#selectedColor description#>
+    /// - Returns: <#description#>
+    fileprivate func setTabBarItemThemeWith(color normalColor: UIColor, selectedColor: UIColor) {
         let normalAttributes: [NSAttributedString.Key : Any] = [.foregroundColor:normalColor, .font: UIFont.regularFont18()]
         let selectedAttributes: [NSAttributedString.Key : Any] = [.foregroundColor:selectedColor, .font: UIFont.regularFont18()]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
-    
-    fileprivate func setTabBarTheme() -> Void {
-            
+    /// <#Description#>
+    /// - Returns: <#description#>
+    fileprivate func setTabBarTheme() {
             //去掉UITabBarController上面的黑色线条
     //        self.tabBar.barStyle = UIBarStyle.black
 
@@ -82,4 +93,3 @@ extension ViewController {
             self.tabBar.layer.shadowOpacity = 0.3
         }
 }
-

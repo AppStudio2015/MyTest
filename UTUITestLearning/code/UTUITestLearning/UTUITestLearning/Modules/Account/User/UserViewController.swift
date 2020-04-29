@@ -10,14 +10,12 @@ import UIKit
 
 /// 用户视图控制器
 class UserViewController: BaseViewController {
-    
     /// 用户视图
     fileprivate lazy var userView: UserView = {
         let view: UserView = UserView.init(frame: self.view.bounds)
         view.delegate = self
         return view
     }()
-    
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
@@ -39,12 +37,10 @@ extension UserViewController: UserViewDelegate {
             //Finished
         }
     }
-    
     func userView(_ view: UserView, didSelectSettingItemAt index: Int) {
         let viewController: UserSettingViewController = UserSettingViewController()
         viewController.title = "Settings"
         viewController.view.backgroundColor = UIColor.white
-        
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
