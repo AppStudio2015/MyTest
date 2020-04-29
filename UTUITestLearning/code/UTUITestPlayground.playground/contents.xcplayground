@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
     <pages>
         <page name='01_Summary'/>
         <page name='02_Concept'/>
@@ -8,6 +8,6 @@
         <page name='05_UTUITest'/>
         <page name='06_AdvancedUTUITest'/>
         <page name='07_ImproveCodeQuality'/>
-        <page name='08_Extension'/>
+        <page name='08_Extensions'/>
     </pages>
 </playground>

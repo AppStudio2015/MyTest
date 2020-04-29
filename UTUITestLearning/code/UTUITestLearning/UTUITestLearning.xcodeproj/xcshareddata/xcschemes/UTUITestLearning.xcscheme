@@ -29,6 +29,15 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       codeCoverageEnabled = "YES"
       onlyGenerateCoverageForSpecifiedTargets = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "04513C4624551D350018A867"
+            BuildableName = "UTUITestLearning.app"
+            BlueprintName = "UTUITestLearning"
+            ReferencedContainer = "container:UTUITestLearning.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
          <TestableReference
             skipped = "NO">

@@ -22,6 +22,22 @@ class UTUITestLearningTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        let userModel = UserModel()
+//        userModel.testFileprivateFunc()
+        let settingModel = UserModel.defaultSettingModel()
+        switch settingModel {
+        case .section0(let models):
+            guard let datas = models else {
+                XCTAssertFalse(false)
+                return
+            }
+            XCTAssertTrue(datas.count > 0)
+            break
+        default:
+            XCTAssertFalse(false)
+            break
+        }
+        
     }
 
     func testPerformanceExample() throws {
@@ -32,3 +48,10 @@ class UTUITestLearningTests: XCTestCase {
     }
 
 }
+
+//extension UserModel {
+//    func privateFunc() -> Void {
+//
+//    }
+//}
+
