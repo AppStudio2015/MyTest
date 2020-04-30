@@ -28,6 +28,7 @@
 		04513C8824551EF20018A867 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8724551EF20018A867 /* SignupViewController.m */; };
 		04513C8B24551F150018A867 /* SignupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8A24551F150018A867 /* SignupModel.m */; };
 		0459352024592B3A00688247 /* UserSigninUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459351F24592B3A00688247 /* UserSigninUITests.swift */; };
+		045AA9D0245A6E1A00FE39A2 /* UserSigninModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AA9CF245A6E1A00FE39A2 /* UserSigninModelTests.swift */; };
 		0462E642245869DF008E758C /* SignupModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462E641245869DF008E758C /* SignupModelTests.m */; };
 		047D91B02456B40B00A6EA98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91AF2456B40B00A6EA98 /* BaseViewController.swift */; };
 		047D91B22456B42000A6EA98 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B12456B42000A6EA98 /* BaseView.swift */; };
@@ -95,6 +96,7 @@
 		04513C8A24551F150018A867 /* SignupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupModel.m; sourceTree = "<group>"; };
 		04513C90245524580018A867 /* UTUITestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UTUITestPlayground.playground; path = ../UTUITestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		0459351F24592B3A00688247 /* UserSigninUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninUITests.swift; sourceTree = "<group>"; };
+		045AA9CF245A6E1A00FE39A2 /* UserSigninModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninModelTests.swift; sourceTree = "<group>"; };
 		0462E640245869DF008E758C /* UTUITestLearningTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UTUITestLearningTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		0462E641245869DF008E758C /* SignupModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupModelTests.m; sourceTree = "<group>"; };
 		047D91AF2456B40B00A6EA98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				04513C6124551D370018A867 /* UTUITestLearningTests.swift */,
+				045AA9CF245A6E1A00FE39A2 /* UserSigninModelTests.swift */,
 				04513C6324551D370018A867 /* Info.plist */,
 				0462E641245869DF008E758C /* SignupModelTests.m */,
 				0462E640245869DF008E758C /* UTUITestLearningTests-Bridging-Header.h */,
@@ -565,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				045AA9D0245A6E1A00FE39A2 /* UserSigninModelTests.swift in Sources */,
 				0462E642245869DF008E758C /* SignupModelTests.m in Sources */,
 				04513C6224551D370018A867 /* UTUITestLearningTests.swift in Sources */,
 			);
@@ -736,6 +740,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearning/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -743,6 +748,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dhc.UTUITestLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -760,6 +766,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearning/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -767,6 +774,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dhc.UTUITestLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
