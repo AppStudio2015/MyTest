@@ -62,12 +62,13 @@ tim.description()
 //xiaoMing.description()
 
 // case 4
-tim.drink(something: "Milk")
-tim.drink(something: "Vodka")
+//tim.drink(something: "Milk")
+//tim.drink(something: "Vodka")
 
 //: Demo2 演示TDD(测试驱动开发)
 
-//let lilei = Person2(name: "LiLei", sex: .male, age: 30, nationality: .Chinese)
+let lilei = Person2(name: "LiLei", sex: .male, age: 30, nationality: .Chinese, hobbies:[Hobby(name: "Fittness", type: "Action")])
+print(lilei.description)
 //let lilei = Person2(name: "LiLei", sex: .male, age: 160, nationality: .Chinese)
 //lilei.drink(something: .juice("Orange"))
 //lilei.drink(something: .wine("Vodka"))

@@ -37,6 +37,25 @@
     XCTAssertTrue([result isEqualToString:@"Prviate func has no parameter"]);
 }
 
+- (void)testO1RequestSignupSuccess {
+    
+    XCTestExpectation* expectation = [self expectationWithDescription:@"RequestSignupSuccess"];
+    
+    dispatch_queue_t queue = dispatch_queue_create("group.queue", DISPATCH_QUEUE_SERIAL);
+    
+    dispatch_block_t block = dispatch_block_create(0, ^{
+        [NSThread sleepForTimeInterval:1.0f];
+        printf("=====block invoke=====\n");
+        [expectation fulfill];
+    });
+    
+    dispatch_async(queue, block);
+    
+    [self waitForExpectationsWithTimeout:3 handler:^(NSError * _Nullable error) {
+        
+    }];
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

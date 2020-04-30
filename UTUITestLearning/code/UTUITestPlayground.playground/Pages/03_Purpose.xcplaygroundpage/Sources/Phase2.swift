@@ -36,6 +36,11 @@ public struct Hobby {
     
     /// 类型
     public var type: String
+    
+    public init(name: String, type: String) {
+        self.name = name
+        self.type = type
+    }
 }
 
 // MARK: - PersonProtocol
@@ -97,7 +102,17 @@ public struct Person2 {
     }
 }
 
-extension Person2 : PersonProtocol {
+extension Person2: CustomStringConvertible {
+    public var description: String {
+        let content: String = """
+        My name is \(self.name), \(self.sex), \(self.age) years old, and I'm a \(self.nationality).
+        """
+//        print(content)
+        return content
+    }
+}
+
+extension Person2: PersonProtocol {
     public typealias HumanFoods = Foods.SomeFoods
     
     public typealias HumanDrinks = Foods.SomeDrinks

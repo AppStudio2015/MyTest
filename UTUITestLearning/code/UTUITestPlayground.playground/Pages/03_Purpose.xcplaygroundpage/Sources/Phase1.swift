@@ -40,7 +40,7 @@ extension Person1 {
     
     public func description() -> Void {
         let comment: String = """
-            My name is \(self.name), \(self.sex), \(self.age) years old. I am \(self.nationality).
+        My name is \(self.name), \(self.sex), \(self.age) years old. I am \(self.nationality).
         """
         print("\(comment)")
     }
