@@ -29,9 +29,6 @@ class UTUITestLearningUITests: XCTestCase {
 
     func test01EnterRegisterView() throws {
         // UI tests must launch the application that they test.
-//        let app = XCUIApplication()
-//        app.launch()
-
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         let tabBarButtons = app.tabBars.buttons
@@ -43,7 +40,10 @@ class UTUITestLearningUITests: XCTestCase {
         let registerButton = app.buttons["还没注册么？"]
         registerButton.tap()
         sleep(1)
+        let confirmPwdTF = app.textFields["确认密码"].firstMatch
+        XCTAssert(confirmPwdTF.placeholderValue == "确认密码", "Pass")
     }
+    
     func test02EnterSigninView() {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()
@@ -59,6 +59,7 @@ class UTUITestLearningUITests: XCTestCase {
         let siginButton = app.buttons["登录"]
         siginButton.tap()
     }
+    
     func test03EnterSettingView() {
         self.enterUserView()
         sleep(1)
@@ -74,7 +75,7 @@ class UTUITestLearningUITests: XCTestCase {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
-                XCUIApplication().launch()
+//                XCUIApplication().launch()
             }
         }
     }

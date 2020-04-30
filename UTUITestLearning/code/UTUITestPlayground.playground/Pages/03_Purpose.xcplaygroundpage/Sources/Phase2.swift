@@ -63,9 +63,9 @@ extension PersonProtocol {
 // MARK: - Person2
 
 public enum PersonError: Error {
-    case ageError(_ description: String?)
-    case eatError(_ description: String?)
-    case drinkError(_ description: String?)
+    case ageError(_ message: String?)
+    case eatError(_ message: String?)
+    case drinkError(_ message: String?)
 }
 
 public enum Foods {
@@ -104,8 +104,18 @@ public struct Person2 {
 
 extension Person2: CustomStringConvertible {
     public var description: String {
+        var myHobbies: String {
+            guard let someHobbies = self.hobbies else {
+                return "I have no hobby yet."
+            }
+            let hobbyStr = someHobbies.map({$0.name}).reduce("", {
+                return $0 == "" ? $1 : $0 + "," + $1
+            })
+            return "I like \(hobbyStr)"
+            
+        }
         let content: String = """
-        My name is \(self.name), \(self.sex), \(self.age) years old, and I'm a \(self.nationality).
+        My name is \(self.name), \(self.sex), \(self.age) years old, and I'm a \(self.nationality).\n\(myHobbies)
         """
 //        print(content)
         return content

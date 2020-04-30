@@ -29,18 +29,45 @@ class UserViewController: BaseViewController {
     }
 }
 
+extension UserViewController {
+    
+    /// Push 视图控制器
+    /// - Parameters:
+    ///   - viewController: 视图控制器
+    ///   - animated: 是否有动效
+    ///   - bottomBarIsHidden: 底部栏是否隐藏，默认： `True`
+    func pushViewController(_ viewController: UIViewController, animated: Bool, bottomBarIsHidden: Bool = true) {
+        guard let rootViewController = self.navigationController else {
+            return
+        }
+        viewController.hidesBottomBarWhenPushed = bottomBarIsHidden
+        rootViewController.pushViewController(viewController, animated: animated)
+    }
+    
+    /// Present 视图控制器
+    /// - Parameters:
+    ///   - viewController: 视图控制器
+    ///   - animated: 是否有动效
+    ///   - modalStyle: 模态类型，默认：`FullScreen`
+    func presentViewController(_ viewController: UIViewController, animated: Bool, modalStyle: UIModalPresentationStyle = .fullScreen) {
+        viewController.modalPresentationStyle = modalStyle
+        self.present(viewController, animated: animated, completion: nil)
+    }
+}
+
 // MARK: - UserViewDelegate
 
 extension UserViewController: UserViewDelegate {
     func userViewDidClickAvatar(_ view: UserView) {
-        self.present(SigninViewController(), animated: true) {
-            //Finished
-        }
+        let viewController: SigninViewController = SigninViewController()
+        viewController.title = "Signin"
+        self.presentViewController(SigninViewController(), animated: true, modalStyle: .pageSheet)
     }
+    
     func userView(_ view: UserView, didSelectSettingItemAt index: Int) {
         let viewController: UserSettingViewController = UserSettingViewController()
         viewController.title = "Settings"
         viewController.view.backgroundColor = UIColor.white
-        self.navigationController?.pushViewController(viewController, animated: true)
+        self.pushViewController(viewController, animated: true)
     }
 }
