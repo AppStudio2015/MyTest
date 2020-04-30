@@ -35,25 +35,24 @@ class ViewController: UITabBarController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setTabBarTheme()
-        self.setTabBarItemThemeWith(color: UIColor.black, selectedColor: UIColor.blue)
-
+        self.setTabBarItemTheme(with: UIColor.black, selectedColor: UIColor.blue)
         self.createViewControllers()
     }
 }
 
 extension ViewController {
-    /// <#Description#>
-    /// - Returns: <#description#>
+    /// 获取视图控制器集合
+    /// - Returns: 视图控制器集合
     fileprivate func createViewControllers() {
         self.viewControllers = [self.homeNaviController, self.userNaviController]
     }
-    /// <#Description#>
+    /// 设置TabBar
     /// - Parameters:
-    ///   - tabBarItem: <#tabBarItem description#>
-    ///   - title: <#title description#>
-    ///   - selectedImageName: <#selectedImageName description#>
-    ///   - normalImageName: <#normalImageName description#>
-    /// - Returns: <#description#>
+    ///   - tabBarItem: TabBarItem
+    ///   - title: 标题
+    ///   - selectedImageName: 选中时图标
+    ///   - normalImageName: 非选中时图标
+    /// - Returns: Void
     fileprivate func setTabBarItem(_ tabBarItem: inout UITabBarItem,
                                    title: String,
                                    selectedImageName: String,
@@ -65,19 +64,19 @@ extension ViewController {
 
         tabBarItem = UITabBarItem.init(title: title, image: normalTabBarImage, selectedImage: selectedTabBarImage)
     }
-    /// <#Description#>
+    /// 设置TabBar样式
     /// - Parameters:
-    ///   - normalColor: <#normalColor description#>
-    ///   - selectedColor: <#selectedColor description#>
-    /// - Returns: <#description#>
-    fileprivate func setTabBarItemThemeWith(color normalColor: UIColor, selectedColor: UIColor) {
+    ///   - normalColor: 非选中颜色
+    ///   - selectedColor: 选中颜色
+    /// - Returns: Void
+    fileprivate func setTabBarItemTheme(with normalColor: UIColor, selectedColor: UIColor) {
         let normalAttributes: [NSAttributedString.Key : Any] = [.foregroundColor:normalColor, .font: UIFont.regularFont18()]
         let selectedAttributes: [NSAttributedString.Key : Any] = [.foregroundColor:selectedColor, .font: UIFont.regularFont18()]
         UITabBarItem.appearance().setTitleTextAttributes(normalAttributes, for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes(selectedAttributes, for: .selected)
     }
-    /// <#Description#>
-    /// - Returns: <#description#>
+    /// 设置TabBar样式
+    /// - Returns: Void
     fileprivate func setTabBarTheme() {
             //去掉UITabBarController上面的黑色线条
     //        self.tabBar.barStyle = UIBarStyle.black
