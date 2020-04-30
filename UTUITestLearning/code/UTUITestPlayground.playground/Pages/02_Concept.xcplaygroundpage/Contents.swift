@@ -238,7 +238,7 @@ testC4(a: false, b: false)
      2. 执行多个测试方法
        - 在测试代码中，在每个`测试类`前点击`▶️`执行。
        - 在`Show the Test navigator`中，点击每个`测试类`后面的`▶️`执行。
-       ![XCTestExecute00](XCTestExecute00.png)
+       ![XCTestExecute00](XCTestExecute01.png)
  
    * 查看结果
      1. 在`Show the Test navigator`中查看。
