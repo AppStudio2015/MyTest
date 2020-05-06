@@ -10,6 +10,8 @@
 
 @interface UserSignupUITests : XCTestCase
 
+@property (nonatomic, strong) XCUIApplication *app;
+
 /// 进入指定界面
 - (void)enterSpecificViewWaitSeconds:(unsigned int)seconds;
 
@@ -42,6 +44,17 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [self expectationForPredicate:[NSPredicate predicateWithFormat:@"self.count = 1"]
+              evaluatedWithObject:self.app.tables
+                          handler:nil];
+    [self waitForExpectationsWithTimeout:2.0 handler:nil];
+}
+
+/// 启动应用
+/// @param seconds 停留时长
+- (void)launchAppWaitSeconds:(unsigned int)seconds {
+    [_app launch];
+    sleep(seconds);
 }
 
 /// 进入特定视图

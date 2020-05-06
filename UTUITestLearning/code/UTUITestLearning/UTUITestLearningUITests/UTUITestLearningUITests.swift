@@ -34,10 +34,11 @@ class UTUITestLearningUITests: XCTestCase {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()
         sleep(1)
-        let signinButton = app.tables.buttons["Signin"]
+        let signinButton = app.tables.buttons["Signin"].firstMatch
         signinButton.tap()
         sleep(1)
         let registerButton = app.buttons["还没注册么？"]
+        XCTAssertTrue(registerButton.exists) 
         registerButton.tap()
         sleep(1)
         let confirmPwdTF = app.textFields["确认密码"].firstMatch
