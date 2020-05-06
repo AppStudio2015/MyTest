@@ -27,6 +27,7 @@
 		04513C8524551EDA0018A867 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8424551EDA0018A867 /* SigninViewController.swift */; };
 		04513C8824551EF20018A867 /* SignupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8724551EF20018A867 /* SignupViewController.m */; };
 		04513C8B24551F150018A867 /* SignupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04513C8A24551F150018A867 /* SignupModel.m */; };
+		04585E932462B74A00224953 /* AccountService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04585E922462B74A00224953 /* AccountService.swift */; };
 		0459352024592B3A00688247 /* UserSigninUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0459351F24592B3A00688247 /* UserSigninUITests.swift */; };
 		045AA9D0245A6E1A00FE39A2 /* UserSigninModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045AA9CF245A6E1A00FE39A2 /* UserSigninModelTests.swift */; };
 		0462E642245869DF008E758C /* SignupModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462E641245869DF008E758C /* SignupModelTests.m */; };
@@ -95,6 +96,7 @@
 		04513C8924551F150018A867 /* SignupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignupModel.h; sourceTree = "<group>"; };
 		04513C8A24551F150018A867 /* SignupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupModel.m; sourceTree = "<group>"; };
 		04513C90245524580018A867 /* UTUITestPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = UTUITestPlayground.playground; path = ../UTUITestPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		04585E922462B74A00224953 /* AccountService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountService.swift; sourceTree = "<group>"; };
 		0459351F24592B3A00688247 /* UserSigninUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninUITests.swift; sourceTree = "<group>"; };
 		045AA9CF245A6E1A00FE39A2 /* UserSigninModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSigninModelTests.swift; sourceTree = "<group>"; };
 		0462E640245869DF008E758C /* UTUITestLearningTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UTUITestLearningTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				047D91B52456B58500A6EA98 /* User */,
 				04513C7B24551DFC0018A867 /* Signin */,
 				04513C7A24551DD70018A867 /* Register */,
+				04585E922462B74A00224953 /* AccountService.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				0401703124555F0B00CE6AFC /* HomeModel.swift in Sources */,
 				047D91B92456B5BF00A6EA98 /* UserView.swift in Sources */,
 				047D91B22456B42000A6EA98 /* BaseView.swift in Sources */,
+				04585E932462B74A00224953 /* AccountService.swift in Sources */,
 				04513C8824551EF20018A867 /* SignupViewController.m in Sources */,
 				0401703524555F3C00CE6AFC /* HomeViewController.swift in Sources */,
 			);
