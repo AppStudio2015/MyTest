@@ -16,10 +16,36 @@ class UserViewController: BaseViewController {
         view.delegate = self
         return view
     }()
+    
+    fileprivate lazy var signinViewController: SigninViewController = {
+        let viewController: SigninViewController = SigninViewController()
+        viewController.title = "Signin"
+        
+        viewController.signinCompletion = { success -> Void in
+            if success {
+                self.userView.loadData(AccountSession.default.accountInfo)
+            }
+        }
+        
+        return viewController
+    }()
+    
     // MARK: - Lifecycle
     override func loadView() {
         super.loadView()
         self.view = self.userView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let accountSession = AccountSession.default
+        if accountSession.isSignedIn {
+            self.userView.loadData(accountSession.accountInfo)
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
     }
 
     override func viewDidLoad() {
@@ -58,10 +84,24 @@ extension UserViewController {
 // MARK: - UserViewDelegate
 
 extension UserViewController: UserViewDelegate {
+    
     func userViewDidClickAvatar(_ view: UserView) {
+        
+//        if AccountSession.default.isSignedIn {
+//            print("Other ViewController.")
+//            return
+//        }
+        
         let viewController: SigninViewController = SigninViewController()
         viewController.title = "Signin"
-        self.presentViewController(SigninViewController(), animated: true, modalStyle: .pageSheet)
+        
+        viewController.signinCompletion = { success -> Void in
+            if success {
+                self.userView.loadData(AccountSession.default.accountInfo)
+            }
+        }
+        
+        self.presentViewController(viewController, animated: true, modalStyle: .pageSheet)
     }
     
     func userView(_ view: UserView, didSelectSettingItemAt index: Int) {

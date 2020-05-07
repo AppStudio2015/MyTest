@@ -34,10 +34,11 @@ class UTUITestLearningUITests: XCTestCase {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()
         sleep(1)
-        let signinButton = app.tables.buttons["Signin"]
+        let signinButton = app.tables.buttons["Signin"].firstMatch
         signinButton.tap()
         sleep(1)
         let registerButton = app.buttons["还没注册么？"]
+        XCTAssertTrue(registerButton.exists) 
         registerButton.tap()
         sleep(1)
         let confirmPwdTF = app.textFields["确认密码"].firstMatch
@@ -48,19 +49,27 @@ class UTUITestLearningUITests: XCTestCase {
         let tabBarButtons = app.tabBars.buttons
         tabBarButtons["User"].tap()
         sleep(1)
-        let signinButton = app.tables.buttons["Signin"]
+        let signinButton = app.tables.buttons["Signin"].firstMatch
         signinButton.tap()
-        let phoneNumTextField = app.textFields["请输入11位手机号"]
+        let phoneNumTextField = app.textFields["请输入11位手机号"].firstMatch
         phoneNumTextField.tap()
         phoneNumTextField.typeText("12345678900")
-        let passwordTextField = app.textFields["请输入密码"]
+        let passwordTextField = app.secureTextFields["请输入密码"].firstMatch
         passwordTextField.tap()
         passwordTextField.typeText("111111")
-        let siginButton = app.buttons["登录"]
+        
+        let keyDone = app.keyboards.buttons["done"].firstMatch
+        keyDone.tap()
+        sleep(1)
+        let siginButton = app.buttons["登录"].firstMatch
         siginButton.tap()
+        sleep(10)
+        
+        let userName = app.staticTexts["Tony"]
+        XCTAssertNotNil(userName)
     }
     
-    func test03EnterSettingView() {
+    func test03EnterSettingView() throws {
         self.enterUserView()
         sleep(1)
         let table = app.tables.firstMatch

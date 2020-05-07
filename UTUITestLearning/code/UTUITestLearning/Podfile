@@ -1,4 +1,5 @@
 # Uncomment the next line to define a global platform for your project
+# CMD: pod update --verbose --no-repo-update
 platform :ios, '10.0'
 source 'https://github.com/CocoaPods/Specs.git'
 
@@ -13,5 +14,9 @@ target 'UTUITestLearning' do
   pod 'SnapKit'
   # Lint
   pod 'SwiftLint'
+  # Rx
+  pod 'RxSwift', '~> 5'
+  pod 'RxCocoa', '~> 5'
+  pod 'RxDataSources', '~> 4'
 
 end
