@@ -22,6 +22,11 @@ protocol UserViewDelegate: NSObjectProtocol {
     func userView(_ view: UserView, didSelectSettingItemAt index: Int)
 }
 
+protocol ViewDataLoadable {
+    associatedtype DataType
+    func loadData(_ data: DataType?)
+}
+
 // MARK: - UserView
 
 /// 用户视图
@@ -36,8 +41,10 @@ class UserView: BaseView {
             }
         }
     }
+    
     /// 昵称
     @IBOutlet weak var nickName: UILabel!
+    
     /// 设置列表
     @IBOutlet weak var settingTableView: UITableView! {
         didSet {
@@ -48,18 +55,22 @@ class UserView: BaseView {
             }
         }
     }
+    
     /// 代理
     public weak var delegate: UserViewDelegate?
+    
     /// 默认设置项
     fileprivate lazy var settingModel: UserSettingModel = {
         let model = UserModel.defaultSettingModel()
         return model
     }()
+    
     // MARK: - Lifecycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.layoutNibView()
     }
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         self.layoutNibView()
@@ -77,11 +88,28 @@ extension UserView {
     }
 }
 
+// MARK: - Public Methods
+
+extension UserView: ViewDataLoadable {
+    typealias DataType = AccountInfo
+    
+    func loadData(_ data: DataType?) {
+        if let imageName = data?.userAvatar, let avatar: UIImage = UIImage(named: imageName) {
+            self.avatarBtn.setImage(avatar, for: .normal)
+            self.avatarBtn.setTitle(nil, for: .normal)
+        }
+        
+        self.nickName.text = data?.userName
+    }
+}
+
 // MARK: - UITableViewDataSource
+
 extension UserView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch settingModel {
         case .section0(let models):
@@ -90,9 +118,11 @@ extension UserView: UITableViewDataSource {
             return 0
         }
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 70
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: UITableViewCell! = tableView.dequeueReusableCell(withIdentifier: "Cell")
         if cell == nil {
@@ -113,6 +143,7 @@ extension UserView: UITableViewDataSource {
 }
 
 // MARK: - UITableViewDelegate
+
 extension UserView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.delegate?.userView(self, didSelectSettingItemAt: indexPath.row)

@@ -25,5 +25,15 @@ class BaseViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    class func rootViewController() -> UIViewController {
+        return UIApplication.shared.keyWindow!.rootViewController!
+    }
+      
+    func presentAlert(_ title: String, message: String) {
+      let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
+      alertView.addAction(UIAlertAction(title: "OK", style: .cancel) { _ in
+      })
+      self.present(alertView, animated: true, completion: nil)
+    }
 }

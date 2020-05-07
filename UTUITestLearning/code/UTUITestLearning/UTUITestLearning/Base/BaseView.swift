@@ -41,7 +41,6 @@ class BaseView: UIView {
         // Drawing code
     }
     */
-
 }
 
 extension BaseView: NibLoadable {
