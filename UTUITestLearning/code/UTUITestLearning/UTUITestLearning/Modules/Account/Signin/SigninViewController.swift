@@ -15,6 +15,13 @@ class SigninViewController: BaseViewController {
     
     var signinCompletion: SigninCompletion?
     
+    /// 登录模型
+    fileprivate lazy var siginModel: SigninModel = {
+        let model = SigninModel()
+        
+        return model
+    }()
+    
     /// 登录视图
     fileprivate lazy var signinView: SigninView = {
         let view = SigninView.init(frame: self.view.bounds)
@@ -40,34 +47,31 @@ class SigninViewController: BaseViewController {
 
 extension SigninViewController {
     
-    fileprivate func handleSigninResult(_ result: Data) {
+    fileprivate func handleSigninResult(_ result: AccountInfo) {
+        // Save account information to AccountSession
         let accountSession = AccountSession.default
-        let accInfo: AccountInfo = AccountInfo(userId: "123456", userToken: "qazwsxcde", phoneNumber: "12345678900", userName: "Tony", userAvatar: "ic_person_48pt")
         accountSession.isSignedIn = true
-        accountSession.accountInfo = accInfo
+        accountSession.accountInfo = result
+        
+        // Notify sigin success
         if let handler = self.signinCompletion {
             handler(true)
         }
+        // Dismiss SiginViewController
         self.dismiss(animated: true, completion: nil)
     }
     
     fileprivate func signin(with phoneNumber: String, password: String) {
         self.signinView.startLoading()
-        AccountService.signin(with: phoneNumber, password: password) { [unowned self](data, error) -> (Void) in
+        self.siginModel.signin(with: phoneNumber, password: password) { [unowned self] (isSignedIn, accountInfo) -> (Void) in
             self.signinView.stopLoading()
             
-            if let anError = error {
-                print("An \(anError) occur!")
+            if isSignedIn, let anAccountInfo = accountInfo {
+                self.handleSigninResult(anAccountInfo)
                 return
             }
             
-            guard let aData = data else {
-                print("No data!")
-                return
-            }
-            
-            print("Response: \(aData)")
-            self.handleSigninResult(aData)
+            print("Sigin failed")
         }
     }
 }

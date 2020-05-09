@@ -18,9 +18,13 @@
  
      ```
  
+     - 参考 `项目工程中` -> `UTUITestLearningTests` -> `SignupModelTests.m`
+ 
    * Swift
      - @testable
-     在主工程的`Target`的`Build Settings`中把`Enable Testability`设置为`YES`
+ 
+     在主工程的`Target`的`Build Settings`中将`Enable Testability`设置为`YES`
+ 
      > @testable provides access only for “internal” functions; “private” declarations are not visible outside of their file even when using @testable.
  
      ```swift
@@ -29,15 +33,47 @@
  
      ```
  
+     - 参考 `项目工程中` -> `UTUITestLearningTests` -> `UTUITestLearningTests`
  ---
  
- ### 回调函数(代理函数)测试
+ ### 异步测试（回调或Block）
+   * XCTestExpectation && XCTWaiter
+ 
+   ```swift
+     func testDownloadWebData() {
+         
+         // Create an expectation for a background download task.
+         let expectation = XCTestExpectation(description: "Download apple.com home page")
+         
+         // Create a URL for a web page to be downloaded.
+         let url = URL(string: "https://apple.com")!
+         
+         // Create a background task to download the web page.
+         let dataTask = URLSession.shared.dataTask(with: url) { (data, _, _) in
+             
+             // Make sure we downloaded some data.
+             XCTAssertNotNil(data, "No data was downloaded.")
+             
+             // Fulfill the expectation to indicate that the background task has finished successfully.
+             expectation.fulfill()
+             
+         }
+         
+         // Start the download task.
+         dataTask.resume()
+         
+         // Wait until the expectation is fulfilled, with a timeout of 10 seconds.
+         wait(for: [expectation], timeout: 10.0)
+     }
+   ```
+ 
+   * 参考 `项目工程中` -> `UTUITestLearningTests` -> `UserSigninModelTests`
  
  ---
  
  ### Mock
    * OCMock
-   * Dobby,MockFive, SwiftMock
+   * Dobby, MockFive, SwiftMock
  
  ---
  
@@ -128,6 +164,9 @@
    * [Xcode Test Plans](https://useyourloaf.com/blog/xcode-test-plans/)
    * [Random And Parallel Tests](https://useyourloaf.com/blog/xcode-10-random-and-parallel-tests/)
    * [How do I run unit tests from the command line](https://developer.apple.com/library/archive/technotes/tn2339/_index.html)
+   * [Snapshot Testing](https://www.objc.io/issues/15-testing/snapshot-testing/)
+   * [objc.io - Testing](https://www.objc.io/issues/15-testing/)
+   * [Testing with RxBlocking](http://rx-marin.com/post/rxblocking-part1/)
  */
 
 

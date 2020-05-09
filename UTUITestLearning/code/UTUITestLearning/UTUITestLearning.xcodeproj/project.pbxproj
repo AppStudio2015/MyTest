@@ -33,6 +33,7 @@
 		0462E642245869DF008E758C /* SignupModelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0462E641245869DF008E758C /* SignupModelTests.m */; };
 		04632F6F2463A4D1005F2461 /* UserScreenUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04632F6E2463A4D1005F2461 /* UserScreenUITests.swift */; };
 		04632F712463D778005F2461 /* AccountSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04632F702463D778005F2461 /* AccountSession.swift */; };
+		04657279246655450061F175 /* CommonProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04657278246655450061F175 /* CommonProtocol.swift */; };
 		047D91B02456B40B00A6EA98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91AF2456B40B00A6EA98 /* BaseViewController.swift */; };
 		047D91B22456B42000A6EA98 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B12456B42000A6EA98 /* BaseView.swift */; };
 		047D91B42456B43700A6EA98 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047D91B32456B43700A6EA98 /* BaseModel.swift */; };
@@ -105,6 +106,7 @@
 		0462E641245869DF008E758C /* SignupModelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignupModelTests.m; sourceTree = "<group>"; };
 		04632F6E2463A4D1005F2461 /* UserScreenUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserScreenUITests.swift; sourceTree = "<group>"; };
 		04632F702463D778005F2461 /* AccountSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSession.swift; sourceTree = "<group>"; };
+		04657278246655450061F175 /* CommonProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonProtocol.swift; sourceTree = "<group>"; };
 		047D91AF2456B40B00A6EA98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		047D91B12456B42000A6EA98 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		047D91B32456B43700A6EA98 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				047D91AF2456B40B00A6EA98 /* BaseViewController.swift */,
 				047D91B32456B43700A6EA98 /* BaseModel.swift */,
 				047D91B12456B42000A6EA98 /* BaseView.swift */,
+				04657278246655450061F175 /* CommonProtocol.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				04513C7F24551E8B0018A867 /* SignupView.m in Sources */,
 				047D91BF2456B77900A6EA98 /* UIColorExtensions.swift in Sources */,
 				04513C4B24551D350018A867 /* AppDelegate.swift in Sources */,
+				04657279246655450061F175 /* CommonProtocol.swift in Sources */,
 				0401703324555F1F00CE6AFC /* HomeView.swift in Sources */,
 				04513C8124551EA90018A867 /* SigninView.swift in Sources */,
 				04513C8B24551F150018A867 /* SignupModel.m in Sources */,
@@ -752,7 +756,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearning/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -760,7 +764,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dhc.UTUITestLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -778,7 +782,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1.0.1;
+				CURRENT_PROJECT_VERSION = 1.0.2;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = UTUITestLearning/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -786,7 +790,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = dhc.UTUITestLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

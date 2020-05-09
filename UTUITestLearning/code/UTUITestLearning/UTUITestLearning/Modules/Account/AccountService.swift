@@ -46,11 +46,21 @@ protocol AccountValidationService {
 
 // MARK: - AccountService
 
+/// 账号服务
+/// - 注册请求
+/// - 登录请求
 final class AccountService: NSObject {
+    
     typealias Completion = (_ data: Data?, _ error: Error?) -> (Void)
     
+    /// 单例
     static let `default` = AccountService()
     
+    /// 请求服务
+    ///  - 可以来封闭第三方网络请求
+    /// - Parameters:
+    ///   - request: 请求数据
+    ///   - completion: 回调方法
     class func request(with request: URLRequest, completion: @escaping Completion) {
         
         let session: URLSession = URLSession.shared
@@ -65,11 +75,21 @@ final class AccountService: NSObject {
 
 extension AccountService {
     
-    class func signin(with phoneNumber: String, password: String, completion: @escaping Completion) {
+    /// 注册请求
+    /// - Parameters:
+    ///   - phoneNumber: 手机号
+    ///   - password: 密码
+    ///   - completion: 请求回调
+    class func signup(with phoneNumber: String, password: String, completion: @escaping Completion) {
+        
         let url = URL(string: "https://github.com/\(phoneNumber)")!
         let request: URLRequest = URLRequest(url: url, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 5)
         
         AccountService.request(with: request, completion: completion)
+    }
+    
+    class func validateToken(_ token: String, completion: @escaping Completion) {
+        
     }
 }
 
