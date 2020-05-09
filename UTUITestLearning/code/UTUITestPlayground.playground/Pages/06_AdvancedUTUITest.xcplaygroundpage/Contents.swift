@@ -79,8 +79,26 @@
  
  ### XCTest高级功能
    * Record UI Test（录制UI测试）
+ 
+     录制方式（**只支持UITest**）可极大简化写测试的流程，打开录制方式后，只要按一定流程操作手机或模拟器即可，XCTest会根据操作顺序自动填写测试代码。
+ 
+     - 打开`UITest`工程，首先命名测试方法，将`光标`放置到函数体中，然后选择`录制按钮`，启动手机或模拟器，开始进行操作并录制。
+     
+     ![XTestRecord01](XCTestRecord01.png)
+ 
+     - 操作完成后，再次点击`录制按钮`，完成录制，测试代码会自动填写到事先命名好的测试方法中。
+     
+     ![XTestRecord02](XCTestRecord02.png)
+ 
+     - 再次点击 测试函数前的`▶️`按钮，就可以直接运行测试代码了
+ 
+     > * 使用录制功能时，自动生成的代码可能会存在问题，比如按钮多次点击等等，在录制完成后，需要手动优化代码。
+     > * 在使用录制功能时，如果发现`录制按钮`不可点击，可先写一行测试代码，然后就可以进行录制了。
+ 
    * Performance Test（性能测试）
+ 
    * Test Plan（测试计划）
+ 
    * Random And Parallel Tests
    ```
      xcodebuild test-without-building -workspace UTUITestLearning.xcworkspace\

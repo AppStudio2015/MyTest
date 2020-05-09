@@ -9,5 +9,6 @@
         <page name='06_AdvancedUTUITest'/>
         <page name='07_ImproveCodeQuality'/>
         <page name='08_Extensions'/>
+        <page name='ChangeLog'/>
     </pages>
 </playground>
