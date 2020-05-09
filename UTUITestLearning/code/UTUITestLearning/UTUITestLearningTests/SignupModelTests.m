@@ -9,11 +9,16 @@
 #import <XCTest/XCTest.h>
 #import "SignupModel.h"
 
+#pragma mark - SignupModel
+
+/// Signup Model Category for testing private methods
 @interface SignupModel(UnitTest)
 
 - (NSString * _Nullable)privateFunc01WithInputParameter:(NSString * _Nullable)parameter;
 
 @end
+
+#pragma mark - SignupModelTests
 
 @interface SignupModelTests : XCTestCase
 
